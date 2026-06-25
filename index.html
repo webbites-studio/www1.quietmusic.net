@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiet Music | Live Jazz Entertainment</title>
+    <title>Quiet Jazz | Live Jazz Entertainment</title>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;500;600&display=swap"
@@ -21,7 +21,10 @@
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #fff;
+            background:
+                radial-gradient(circle at top left, rgba(214, 182, 123, .18), transparent 32%),
+                radial-gradient(circle at 85% 12%, rgba(30, 90, 168, .12), transparent 26%),
+                linear-gradient(180deg, #faf8f3 0%, #f3f6fb 52%, #f8f7f4 100%);
         }
 
         header {
@@ -69,6 +72,16 @@
             background: #0f3d6e;
         }
 
+        .hero-btn {
+            background: linear-gradient(135deg, #d9b46b 0%, #b8892d 100%);
+            color: #1c1305;
+            box-shadow: 0 10px 24px rgba(122, 84, 22, .28);
+        }
+
+        .hero-btn:hover {
+            background: linear-gradient(135deg, #e6c47f 0%, #c59637 100%);
+        }
+
         nav {
             position: fixed;
             top: 0;
@@ -94,6 +107,16 @@
 
         section {
             padding: 80px 10%;
+        }
+
+        #about,
+        #gallery {
+            background: rgba(255, 255, 255, .62);
+        }
+
+        #services,
+        .vendors {
+            background: rgba(255, 255, 255, .8);
         }
 
         h2 {
@@ -135,105 +158,8 @@
             margin-bottom: 15px;
         }
 
-        .music {
-            background: #f5f8fc;
-        }
-
-        .music-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .music-item {
-            background: white;
-            padding: 25px;
-            border-left: 5px solid #1e5aa8;
-        }
-
-        .music-playlist {
-            max-width: 820px;
-            margin: 28px auto 0;
-            background: #ffffff;
-            border: 1px solid #d8e5f5;
-            border-radius: 12px;
-            padding: 20px 24px;
-            box-shadow: 0 8px 18px rgba(15, 61, 110, .06);
-        }
-
-        .music-playlist h3 {
-            color: #0f3d6e;
-            margin-bottom: 10px;
-        }
-
-        .music-playlist ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .music-playlist li {
-            margin: 10px 0;
-            color: #2e4561;
-        }
-
-        .song-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            background: #f8fbff;
-            border: 1px solid #d8e5f5;
-            border-radius: 10px;
-            padding: 10px 12px;
-        }
-
-        .song-title {
-            font-weight: 600;
-            color: #2e4561;
-        }
-
-        .play-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: #0f3d6e;
-            border: 1px solid #0f3d6e;
-            color: #fff;
-            font-weight: 700;
-            border-radius: 999px;
-            padding: 8px 14px;
-            min-width: 74px;
-            cursor: pointer;
-            transition: background .2s ease, transform .2s ease;
-        }
-
-        .play-btn:hover {
-            background: #1e5aa8;
-            border-color: #1e5aa8;
-            transform: translateY(-1px);
-        }
-
-        .music-player-wrap {
-            margin-top: 18px;
-            background: #0b1d33;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 24px rgba(10, 30, 52, .22);
-        }
-
-        .music-player-frame {
-            display: block;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border: 0;
-        }
-
         .events {
-            background:
-                radial-gradient(circle at 15% 20%, rgba(30, 90, 168, .16), transparent 45%),
-                radial-gradient(circle at 85% 10%, rgba(17, 56, 104, .14), transparent 42%),
-                linear-gradient(180deg, #f7fbff 0%, #edf5ff 100%);
+            background: linear-gradient(180deg, rgba(244, 248, 253, .92) 0%, rgba(236, 242, 250, .96) 100%);
         }
 
         .events-list {
@@ -293,10 +219,6 @@
         .event-link:hover {
             color: #1e5aa8;
             border-bottom-color: #1e5aa8;
-        }
-
-        .vendors {
-            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
         }
 
         .vendors-list {
@@ -556,7 +478,6 @@
             }
 
             .services-grid,
-            .music-grid,
             .events-list,
             .vendors-list,
             .gallery {
@@ -573,15 +494,6 @@
 
             .contact-form-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .song-row {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-
-            .play-btn {
-                align-self: flex-start;
             }
 
             .vendor-links {
@@ -612,7 +524,6 @@
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#events">Events</a></li>
-            <li><a href="#music">Music Styles</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#vendors">Preferred Vendors</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -621,9 +532,9 @@
 
     <header>
         <div class="hero">
-            <h1>Quiet Music</h1>
-            <p>Luxury Live Jazz Entertainment for Weddings, Corporate Events, Private Parties & Special Occasions</p>
-            <a href="#contact" class="btn">Book Your Event</a>
+            <h1>Quiet Jazz</h1>
+            <p> Live Jazz Entertainment for Weddings, Corporate Events, Private Parties & Special Occasions</p>
+            <a href="#contact" class="btn hero-btn">Book Your Event</a>
         </div>
     </header>
 
@@ -632,8 +543,8 @@
         <div class="about">
             <p>
                 <strong>Eric Baldwin</strong> is a premier freelance guitarist performing throughout the greater
-                Boston and New England areas. Celebrated for his sophisticated, ambient style,
-                Eric performs as a solo artist and leads an elegant Jazz Trio featuring
+                Boston and New England areas. Known for his ambient style,
+                Eric performs as a solo artist and leads a Jazz Trio featuring
                 saxophone, guitar, and upright bass. Whether performing solo or with his trio,
                 his music is thoughtfully tailored to enhance the atmosphere of any space,
                 providing a rich, beautiful backdrop that never dominates the conversation.
@@ -687,90 +598,8 @@
         </div>
     </section>
 
-    <section id="music" class="music">
-        <h2>Music Styles</h2>
-
-        <div class="music-grid">
-
-            <div class="music-item">
-                <h3>Smooth Jazz</h3>
-                <p>Relaxed and sophisticated.</p>
-            </div>
-
-            <div class="music-item">
-                <h3>Classic Jazz</h3>
-                <p>Timeless standards and favorites.</p>
-            </div>
-
-            <div class="music-item">
-                <h3>Cocktail Lounge</h3>
-                <p>Perfect for upscale events.</p>
-            </div>
-
-            <div class="music-item">
-                <h3>Contemporary Jazz</h3>
-                <p>Modern arrangements with style.</p>
-            </div>
-
-            <div class="music-item">
-                <h3>Instrumental Favorites</h3>
-                <p>Elegant melodies for every audience.</p>
-            </div>
-
-            <div class="music-item">
-                <h3>Custom Requests</h3>
-                <p>Personalized song selections available.</p>
-            </div>
-
-        </div>
-
-        <div class="music-playlist">
-            <h3>Songs You Can Listen To</h3>
-            <ul>
-                <li>
-                    <div class="song-row">
-                        <span class="song-title">Somewhere Over the Rainbow by Frank Sinatra (on guitar)</span>
-                        <a class="play-btn" href="https://www.youtube.com/watch?v=V4qnpyO_UFE" target="_blank"
-                            rel="noopener noreferrer">Play</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="song-row">
-                        <span class="song-title">As Time Goes By</span>
-                        <a class="play-btn"
-                            href="https://www.youtube.com/results?search_query=As+Time+Goes+By+jazz+guitar"
-                            target="_blank" rel="noopener noreferrer">Play</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="song-row">
-                        <span class="song-title">The Girl from Ipanema</span>
-                        <a class="play-btn"
-                            href="https://www.youtube.com/results?search_query=The+Girl+from+Ipanema+jazz+guitar"
-                            target="_blank" rel="noopener noreferrer">Play</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="song-row">
-                        <span class="song-title">Misty</span>
-                        <a class="play-btn" href="https://www.youtube.com/results?search_query=Misty+jazz+guitar"
-                            target="_blank" rel="noopener noreferrer">Play</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="song-row">
-                        <span class="song-title">Beatles classics</span>
-                        <a class="play-btn"
-                            href="https://www.youtube.com/results?search_query=Beatles+jazz+guitar+covers"
-                            target="_blank" rel="noopener noreferrer">Play</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
     <section id="events" class="events">
-        <h2>Events</h2>
+        <h2>Upcoming Events</h2>
         <div class="events-list">
             <article class="event-card">
                 <span class="event-date">June 20</span>
@@ -1011,30 +840,11 @@
     </section>
 
     <footer>
-        © 2026 Quiet Music | Live Jazz Entertainment
+        © 2026 Quiet Jazz | Live Jazz Entertainment
         <br>
         Website developed by <a href="https://www.webbites.dev" target="_blank"
             rel="noopener noreferrer">www.webbites.dev</a>
     </footer>
-
-    <script>
-        const musicPlayer = document.getElementById('music-player');
-        const musicPlayerWrap = document.getElementById('music-player-wrap');
-        const playButtons = document.querySelectorAll('.music-playlist .play-btn[data-embed]');
-
-        playButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-                const embedUrl = button.getAttribute('data-embed');
-                if (!embedUrl || !musicPlayer || !musicPlayerWrap) {
-                    return;
-                }
-
-                musicPlayer.src = embedUrl;
-                musicPlayerWrap.hidden = false;
-                musicPlayerWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            });
-        });
-    </script>
 
 </body>
 
